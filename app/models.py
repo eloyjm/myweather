@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Location(models.Model):
+    id = models.BigIntegerField(primary_key = True)
     name = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
 
@@ -9,6 +10,7 @@ class Location(models.Model):
         return self.name
 
 class WeatherForecast(models.Model):
+    id = models.BigIntegerField(primary_key = True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
