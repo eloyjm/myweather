@@ -85,10 +85,14 @@ WSGI_APPLICATION = 'myweather.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
-        conn_max_age=600
-    )
- }
+         default='postgresql://postgres:postgres@localhost:5432/mysite',
+                 conn_max_age=600
+                     )}
+       # 'ENGINE': 'django.db.backends.sqlite3',
+       # 'NAME': BASE_DIR / 'db.sqlite3',
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
 
 
 # Password validation
