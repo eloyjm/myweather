@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'myweather.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-         default='postgresql://postgres:postgres@localhost:5432/mysite',
+         default='postgres://myweather_db_user:gpHpNi25saWX7S8UQ6f6bRcEqlXPbl9h@dpg-chuuh85269vccp3nln5g-a.frankfurt-postgres.render.com/myweather_db',
                  conn_max_age=600
                      )}
        # 'ENGINE': 'django.db.backends.sqlite3',
